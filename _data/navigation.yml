@@ -6,14 +6,8 @@
 - title: Blog
   url: /blog/
 
-- title: Tutoriais
-  url: /tutoriais/
+- title: Projects
+  url: /projects/
 
-- title: DNF
-  url: /dnf/
-
-- title: Obter Fedora
-  url: /obter-fedora/
-
-- title: Sobre mim
-  url: /sobre/
+- title: About
+  url: /about/
