@@ -1,10 +1,10 @@
 # Site
-title:          JBlog
-bio:            'Just a simple Jekyll theme'
-description:    "JBlog is a minimal, one column and blue jekyll theme for your blog."
+title:          Fedora Place
+bio:            'Tudo sobre Fedora'
+description:    "Blog brasileiro sobre Fedora."
 picture:        'assets/img/profile.png'
-locale:         en_US
-url:            https://alperenbozkurt.github.io/JBlog
+locale:         pt_BR
+url:            https://fedoraplace.github.io
 
 
 # Jekyll
