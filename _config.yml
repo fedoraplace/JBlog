@@ -34,7 +34,7 @@ facebook: username
   #ad-slot:
 #bing-verify:
 #github: username
-stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+#stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin: username
 #xing: username
 #instagram: username
@@ -42,7 +42,7 @@ stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/
 #tumblr: username
 #pinterest: username
 #foursquare: username
-steam: username
+#steam: username
 #dribbble: username
 #youtube: username
 #soundcloud: username
