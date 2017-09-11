@@ -1,5 +1,5 @@
 ---
-layout: tutoriais
-title: Tutoriais
-excerpt: "Uma lista de tutoriais."
+layout: projects
+title: Artigos
+excerpt: "Uma lista de artigos."
 ---
