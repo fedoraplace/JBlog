@@ -7,13 +7,18 @@ excerpt: "Aprendendo o DNF."
 ![jekyll Image](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1424055625jekyll.png)
 {: .image-pull-right}
 
-<center><b>O Gerenciador de Pacotes DNF</b> aprenda aqui a usar.</center>
+<center><b>O Gerenciador de Pacotes DNF</b><br> Aprenda a usar aqui.</center>
+
+
+
 
 ## Modo de usar:
 
 {% highlight text %}
  dnf [options] <command> [<args>...] 
 {% endhighlight %}   
+
+
 
 ## Descrição:
 
@@ -52,3 +57,49 @@ Comandos disponíveis;
 * upgrade-minimal
 * upgrade-to
 
+
+## Opções:
+
+-4
+Resolva somente para endereços IPv4. 
+
+-6
+Resolva apenas para endereços IPv6. 
+
+--advisory=<advisory>, --advisories=<advisory>
+Inclui pacotes correspondentes ao ID de aviso, por exemplo. FEDORA-2201-123. Aplicável para instalação, repoquery, updateinfo e comando de atualização. 
+
+--allowerasing
+Permitir o apagamento de pacotes instalados para resolver dependências. Esta opção pode ser usada como uma alternativa para o comando yum swap onde os pacotes a serem removidos não são explicitamente definidos. 
+
+--assumeno
+Responda automaticamente para todas as perguntas 
+
+-b, --best
+Experimente as melhores versões de pacotes disponíveis nas transações. Especificamente durante a atualização do DNF, que por padrão, ignora as atualizações que não podem ser instaladas por motivos de dependência, a chave força o DNF a considerar apenas os pacotes mais recentes. Ao executar pacotes com dependências quebradas, o DNF falhará, dando uma razão pela qual a versão mais recente não pode ser instalada. 
+
+--bugfix
+Inclui pacotes que corrigem um problema de bugfix. Aplicável para instalação, repoquery, updateinfo e comando de atualização. 
+
+--bz=<bugzilla>
+Inclui pacotes que consertam um ID do Bugzilla, por exemplo. 123123. Aplicável para instalação, repoquery, updateinfo e comando de atualização. 
+
+-C, --cacheonly
+Execute inteiramente a partir do cache do sistema, não atualize o cache e use-o mesmo no caso de expirar.
+
+O DNF usa um cache separado para cada usuário sob o qual ele é executado. O cache para o usuário raiz é chamado de cache do sistema. Esta opção permite um acesso regular de somente leitura do usuário ao cache do sistema, que geralmente é mais recente que o do usuário e, portanto, ele não precisa esperar a sincronização de metadados. 
+
+--comment=<comment>
+Adicione um comentário ao histórico de transações.
+
+-c <config file>, --config=<config file>
+Localização do arquivo de configuração. 
+
+--cve=<cves>
+Inclui pacotes que consertam uma ID CVE (Vulnerabilidades e exposições comuns) ( http://cve.mitre.org/about/ ), por exemplo. CVE-2201-0123. Aplicável para instalação, repoquery, updateinfo e comando de atualização. 
+
+-d <debug level>, --debuglevel=<debug level>
+Depuração do nível de saída. Este é um valor inteiro entre 0 (sem cadeias de informações adicionais) e 10 (mostra todas as informações de depuração, mesmo que não são compreensíveis para o usuário), o padrão é 2. Deprecated, use -v vez disso. 
+
+--debugsolver
+Descarregue dados ajudando na depuração de dependentes em depuração em ./debugdata. 
