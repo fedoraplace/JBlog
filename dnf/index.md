@@ -9,13 +9,13 @@ excerpt: "Aprendendo o DNF."
 
 <center><b>O Gerenciador de Pacotes DNF</b> aprenda aqui a usar.</center>
 
-##Modo de usar:
+## Modo de usar:
 
 {% highlight text %}
  dnf [options] <command> [<args>...] 
 {% endhighlight %}   
 
-##Descrição:
+## Descrição:
 
 O DNF é a próxima versão principal do YUM, um gerenciador de pacotes para distribuições Linux baseadas em RPM. Ele mantém a compatibilidade CLI com YUM e define uma API rigorosa para extensões e plugins.
 
