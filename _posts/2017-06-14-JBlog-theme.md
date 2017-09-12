@@ -18,7 +18,9 @@ tag:
 
 <center><b>JBlog</b> is a simple jekyll theme.</center>
 
-'_include sudo dnf install gparted
+{% highlight text %}
+sudo dnf install gparted
+{% endhighlight %}   
 
 ## About
 
