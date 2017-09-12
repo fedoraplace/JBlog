@@ -18,6 +18,8 @@ tag:
 
 <center><b>JBlog</b> is a simple jekyll theme.</center>
 
+[code]sudo dnf install gparted[/code]
+
 ## About
 
 I have used this theme in my own php and ruby blogs.I got inspired by [taylantatli](https://github.com/taylantatli/)'s [moon](https://github.com/taylantatli/moon) and [ramme](https://github.com/taylantatli/ramme) themes to use this theme in Jekyll.
