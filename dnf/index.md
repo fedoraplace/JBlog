@@ -12,7 +12,9 @@ excerpt: "Aprendendo o DNF."
 
 
 <br><br><br>
+
 <p align="justify">
+
 ## Modo de usar:
 
 {% highlight text %}
