@@ -67,3 +67,41 @@ Nos métodos básicos, o DNF pode ser usado quase exatamente como o YUM para pes
 
 # dnf remove audacity 
 {% endhighlight %}   
+<br><br><br>
+
+## Atualizações automáticas:
+
+O pacote RPM dnf-automatic como componente DNF fornece um serviço para download automático e instalação de atualizações. Ele pode monitorar e denunciar automaticamente via disponibilidade de atualizações por E-Mail ou enviar um registro sobre pacotes baixados e atualizações instaladas. 
+<br><br><br>
+## Upgrades do sistema:
+
+Os produtos Fedora podem ser atualizados com o plugin de atualização do sistema DNF ou diretamente com o DNF.<br><br><br>
+
+## Suporte de idiomas usando DNF:
+
+O DNF pode ser usado para instalar ou remover suporte de idiomas.<br><br><hr><br><br>
+
+## Comando de remoção automática:
+
+dnf [options] autoremove<br><br>
+
+Remove todos os pacotes do sistema que foram originalmente instalados como dependências de pacotes instalados pelo usuário, mas que não são mais exigidos por nenhum desses pacotes. <br><br>
+
+Os pacotes listados em <i>installonlypkgs</i> nunca são automaticamente removidos por este comando.<br><br>
+
+dnf [options] autoremove [spec]...<br><br>
+
+Ele remove os pacotes especificados do sistema, juntamente com todos os pacotes dependendo dos pacotes que estão sendo removidos. Cada [spec] pode ser um [package-spec] , que especifica um pacote diretamente, ou um @[group-spec] , que especifica um grupo (do meio) que o contém. Ele também remove quaisquer dependências que não são mais necessárias.<br><br>
+
+Há também alguns comandos autoremove específicos: autoremove-n , autoremove-na e autoremove-nevra que permitem a especificação do formato NEVRA do argumento exato.<br><br> 
+
+Este comando, por padrão, não força uma sincronização de metadados expirados. <br><br><br>
+
+## Controle do comando:
+
+dnf [options] check [--dependencies] [--duplicates] [--obsoleted] [--provides]<br><br>
+
+Verifica o local packagedb e produz informações sobre os problemas que ele encontra. Você pode passar o comando de verificação as opções "-dependencies", "-duplicates", "-obsoleted" ou "-provides", para limitar a verificação que é executada (o padrão é "tudo" que faz tudo). 
+
+
+
