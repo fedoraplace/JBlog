@@ -11,7 +11,7 @@ excerpt: "Aprendendo o DNF."
 
 
 
-<br><br><br>
+<br><br><br><p align="justify">
 ## Modo de usar:
 
 {% highlight text %}
@@ -86,7 +86,7 @@ O DNF pode ser usado para instalar ou remover suporte de idiomas.<br><br><br>
 ## Comando de remoção automática:
 
 {% highlight text %}
-dnf [options] autoremove
+# dnf [options] autoremove
 {% endhighlight %} 
 
 Remove todos os pacotes do sistema que foram originalmente instalados como dependências de pacotes instalados pelo usuário, mas que não são mais exigidos por nenhum desses pacotes. <br><br>
@@ -94,7 +94,7 @@ Remove todos os pacotes do sistema que foram originalmente instalados como depen
 Os pacotes listados em <i>installonlypkgs</i> nunca são automaticamente removidos por este comando.<br><br>
 
 {% highlight text %}
-dnf [options] autoremove [spec]...
+# dnf [options] autoremove [spec]...
 {% endhighlight %} 
 
 Ele remove os pacotes especificados do sistema, juntamente com todos os pacotes dependendo dos pacotes que estão sendo removidos. Cada [spec] pode ser um [package-spec] , que especifica um pacote diretamente, ou um @[group-spec] , que especifica um grupo (do meio) que o contém. Ele também remove quaisquer dependências que não são mais necessárias.<br><br>
@@ -106,7 +106,7 @@ Este comando, por padrão, não força uma sincronização de metadados expirado
 ## Controle do comando:
 
 {% highlight text %}
-dnf [options] check [--dependencies] [--duplicates] [--obsoleted] [--provides]
+# dnf [options] check [--dependencies] [--duplicates] [--obsoleted] [--provides]
 {% endhighlight %} 
 
 Verifica o local packagedb e produz informações sobre os problemas que ele encontra. Você pode passar o comando de verificação as opções "-dependencies", "-duplicates", "-obsoleted" ou "-provides", para limitar a verificação que é executada (o padrão é "tudo" que faz tudo). <br><br><br>
@@ -115,7 +115,7 @@ Verifica o local packagedb e produz informações sobre os problemas que ele enc
 ## Verificar o comando de atualização:<br><br>
 
 {% highlight text %}
-dnf [options] check-update [<package-specs>...]
+# dnf [options] check-update [<package-specs>...]
 {% endhighlight %}   <br><br>
 
 Verifica não interativamente se as atualizações dos pacotes especificados estão disponíveis. Se não forem fornecidas <package-specs> , verifica se as atualizações estão disponíveis para o seu sistema. O código de saída DNF será 100 quando houver atualizações disponíveis e uma lista das atualizações será impressa, 0 se não e 1 se ocorrer um erro.<br><br>
@@ -127,15 +127,15 @@ Observe que ter uma versão mais recente específica disponível para um pacote 
 Executa a limpeza de arquivos temporários mantidos para repositórios. Isso inclui quaisquer dados deixados atrás de repositórios desativados ou removidos, bem como para diferentes versões de lançamento de distribuição.<br><br>
 
 {% highlight text %}
-dnf clean dbcache
+# dnf clean dbcache
 Remove arquivos de cache gerados a partir dos metadados do repositório. Isso força o DNF a regenerar os arquivos de cache na próxima vez que ele for executado. 
-dnf clean expire-cache
+# dnf clean expire-cache
 Marca os metadados do repositório que expiraram. O DNF irá re-validar o cache para cada retomada na próxima vez que for usado. 
-dnf clean metadata
+# dnf clean metadata
 Remove metadados do repositório. Esses são os arquivos que o DNF usa para determinar a disponibilidade remota de pacotes. Usando esta opção, o DNF irá baixar todos os metadados da próxima vez que for executado. 
-dnf clean packages
+# dnf clean packages
 Remove todos os pacotes em cache do sistema. 
-dnf clean all
+# dnf clean all
 Faz tudo daquilo acima. 
 {% endhighlight %}   
 
