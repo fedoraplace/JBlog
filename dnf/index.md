@@ -133,6 +133,63 @@ Remove metadados do repositório. Esses são os arquivos que o DNF usa para dete
 Remove todos os pacotes em cache do sistema. 
 # dnf clean all
 Faz tudo daquilo acima. 
-{% endhighlight %}   
+{% endhighlight %}   <br><br><br>
 
+## Comando Distro-Sync:<br><br>
+
+{% highlight text %}
+# dnf distro-sync [<package-spec>...]
+{% endhighlight %}<br><br>
+
+Como atualizações necessárias, baixe ou mantenha os pacotes instalados selecionados para combinar a versão mais recente disponível de qualquer repositório habilitado. Se nenhum pacote for fornecido, todos os pacotes instalados são considerados. <br><br><br>
+    
+## Comando Downgrade:<br><br>
+
+{% highlight text %}
+# dnf [options] downgrade <package-installed-specs>...
+{% endhighlight %} <br><br>
+
+Baixe os pacotes especificados para o mais alto de todas as versões mais baixas conhecidas, se possível. Quando a versão é fornecida e é menor do que a versão do pacote instalado, ela baixa a versão de destino.<br><br><br> 
+
+## Comandos de grupo:<br><br>
+
+Os grupos são coleções virtuais de pacotes. O DNF controla os grupos que o usuário selecionou ("marcado") instalado e pode manipular os pacotes compostos com comandos simples.<br><br> 
+
+{% highlight text %}
+# dnf [options] group [summary] <group-spec>
+Exibir a visão geral de quantos grupos estão instalados e disponíveis. Com uma especificação, limite a saída para os grupos correspondentes. <i>summary</i> é o subcomando de grupos padrão.<br><br> 
+
+# dnf [options] group info <group-spec>
+Exibir listas de pacotes de um grupo. Mostra quais pacotes estão instalados ou estão disponíveis a partir de um repo quando -v é usado.<br><br>
+
+# dnf [options] group install [--with-optional] <group-spec>...
+Marque o grupo especificado instalado e instale os pacotes que ele contém. Também inclua pacotes opcionais do grupo se <i>--with-optional</i> for especificado. Todos os pacotes obrigatórios e padrão serão instalados sempre que possível. Pacotes condicionais são instalados se eles atendem seus requisitos. Se o grupo já estiver (parcialmente) instalado, o comando instala pacotes faltantes do grupo.<br><br> 
+
+# dnf [options] group list <group-spec>...
+Liste todos os grupos correspondentes, quer entre grupos instalados ou disponíveis. Se nada for especificado, liste todos os grupos conhecidos. As opções <i>- --available</i> e <i>- --available</i> reduzem a lista solicitada. Os registros são ordenados pela tag display_order definida no arquivo comps.xml. Fornece uma lista de todos os grupos ocultos usando a opção <i>--hidden</i>. Fornece informações mais detalhadas quando a opção <i>-v</i> é usada.<br><br>
+
+# dnf [options] group remove <group-spec>...
+Marque o grupo removido e remova esses pacotes no grupo do sistema, que não compõem outro grupo instalado e não foram instalados explicitamente pelo usuário. <br><br>
+
+# dnf [options] group upgrade <group-spec>...
+Atualiza os pacotes do grupo e atualiza o próprio grupo. O último consiste em instalar pacotes que foram adicionados ao grupo pela distribuição e remoção de pacotes que foram removidos do grupo, na medida em que não foram instalados explicitamente pelo usuário. 
+{% endhighlight %}   <br><br>
+
+Os grupos também podem ser marcados como instalados ou removidos sem manipular fisicamente qualquer pacote:<br><br>
+
+{% highlight text %}
+# dnf [options] group mark install <group-spec>...
+Marque o grupo especificado instalado. Nenhum pacote será instalado por este comando, mas o grupo será considerado instalado. <br><br>
+
+# dnf [options] group mark remove <group-spec>...
+Marque o grupo especificado removido. Nenhum pacote será removido por este comando. 
+{% endhighlight %}   <br><br><br>
+
+## Comando de Ajuda:<br><br>
+
+{% highlight text %}
+dnf help [<command>]
+{% endhighlight %}   <br><br>
+
+Exibe o texto de ajuda para todos os comandos. Se for dado um nome de comando, apenas exibe a ajuda para esse comando específico. <br><br><br>
 
