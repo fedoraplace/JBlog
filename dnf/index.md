@@ -125,12 +125,16 @@ Executa a limpeza de arquivos temporários mantidos para repositórios. Isso inc
 {% highlight text %}
 # dnf clean dbcache
 Remove arquivos de cache gerados a partir dos metadados do repositório. Isso força o DNF a regenerar os arquivos de cache na próxima vez que ele for executado. 
+
 # dnf clean expire-cache
 Marca os metadados do repositório que expiraram. O DNF irá re-validar o cache para cada retomada na próxima vez que for usado. 
+
 # dnf clean metadata
 Remove metadados do repositório. Esses são os arquivos que o DNF usa para determinar a disponibilidade remota de pacotes. Usando esta opção, o DNF irá baixar todos os metadados da próxima vez que for executado. 
+
 # dnf clean packages
 Remove todos os pacotes em cache do sistema. 
+
 # dnf clean all
 Faz tudo daquilo acima. 
 {% endhighlight %}   <br><br><br>
@@ -157,19 +161,19 @@ Os grupos são coleções virtuais de pacotes. O DNF controla os grupos que o us
 
 {% highlight text %}
 # dnf [options] group [summary] <group-spec>
-Exibir a visão geral de quantos grupos estão instalados e disponíveis. Com uma especificação, limite a saída para os grupos correspondentes. <i>summary</i> é o subcomando de grupos padrão.<br><br> 
+Exibir a visão geral de quantos grupos estão instalados e disponíveis. Com uma especificação, limite a saída para os grupos correspondentes. <i>summary</i> é o subcomando de grupos padrão.
 
 # dnf [options] group info <group-spec>
-Exibir listas de pacotes de um grupo. Mostra quais pacotes estão instalados ou estão disponíveis a partir de um repo quando -v é usado.<br><br>
+Exibir listas de pacotes de um grupo. Mostra quais pacotes estão instalados ou estão disponíveis a partir de um repo quando -v é usado.
 
 # dnf [options] group install [--with-optional] <group-spec>...
-Marque o grupo especificado instalado e instale os pacotes que ele contém. Também inclua pacotes opcionais do grupo se <i>--with-optional</i> for especificado. Todos os pacotes obrigatórios e padrão serão instalados sempre que possível. Pacotes condicionais são instalados se eles atendem seus requisitos. Se o grupo já estiver (parcialmente) instalado, o comando instala pacotes faltantes do grupo.<br><br> 
+Marque o grupo especificado instalado e instale os pacotes que ele contém. Também inclua pacotes opcionais do grupo se <i>--with-optional</i> for especificado. Todos os pacotes obrigatórios e padrão serão instalados sempre que possível. Pacotes condicionais são instalados se eles atendem seus requisitos. Se o grupo já estiver (parcialmente) instalado, o comando instala pacotes faltantes do grupo.
 
 # dnf [options] group list <group-spec>...
-Liste todos os grupos correspondentes, quer entre grupos instalados ou disponíveis. Se nada for especificado, liste todos os grupos conhecidos. As opções <i>- --available</i> e <i>- --available</i> reduzem a lista solicitada. Os registros são ordenados pela tag display_order definida no arquivo comps.xml. Fornece uma lista de todos os grupos ocultos usando a opção <i>--hidden</i>. Fornece informações mais detalhadas quando a opção <i>-v</i> é usada.<br><br>
+Liste todos os grupos correspondentes, quer entre grupos instalados ou disponíveis. Se nada for especificado, liste todos os grupos conhecidos. As opções <i>- --available</i> e <i>- --available</i> reduzem a lista solicitada. Os registros são ordenados pela tag display_order definida no arquivo comps.xml. Fornece uma lista de todos os grupos ocultos usando a opção <i>--hidden</i>. Fornece informações mais detalhadas quando a opção <i>-v</i> é usada.
 
 # dnf [options] group remove <group-spec>...
-Marque o grupo removido e remova esses pacotes no grupo do sistema, que não compõem outro grupo instalado e não foram instalados explicitamente pelo usuário. <br><br>
+Marque o grupo removido e remova esses pacotes no grupo do sistema, que não compõem outro grupo instalado e não foram instalados explicitamente pelo usuário. 
 
 # dnf [options] group upgrade <group-spec>...
 Atualiza os pacotes do grupo e atualiza o próprio grupo. O último consiste em instalar pacotes que foram adicionados ao grupo pela distribuição e remoção de pacotes que foram removidos do grupo, na medida em que não foram instalados explicitamente pelo usuário. 
@@ -179,7 +183,7 @@ Os grupos também podem ser marcados como instalados ou removidos sem manipular 
 
 {% highlight text %}
 # dnf [options] group mark install <group-spec>...
-Marque o grupo especificado instalado. Nenhum pacote será instalado por este comando, mas o grupo será considerado instalado. <br><br>
+Marque o grupo especificado instalado. Nenhum pacote será instalado por este comando, mas o grupo será considerado instalado. 
 
 # dnf [options] group mark remove <group-spec>...
 Marque o grupo especificado removido. Nenhum pacote será removido por este comando. 
@@ -246,7 +250,7 @@ Este comando, por padrão, não força uma sincronização de metadados expirado
 ## Instalar:<br><br>
 
 {% highlight text %}
-dnf [options] install <spec>...
+# dnf [options] install <spec>...
 {% endhighlight %}  <br><br>
 
 O DNF garante que os pacotes fornecidos e suas dependências estejam instalados no sistema. Cada [<spec>] pode ser um [<package-spec>] , ou um @[<group-spec>]. <br><br>
@@ -261,25 +265,25 @@ Todos os formulários recebem um parâmetro [<package-specs>...] para limitar o 
 
 {% highlight text %}
 # dnf [options] list [--all] [<package-name-specs>...]
-Lista todos os pacotes conhecidos por nós, presentes no RPMDB, em um repo ou em ambos. <br><br>
+Lista todos os pacotes conhecidos por nós, presentes no RPMDB, em um repo ou em ambos. 
 
 # dnf [options] list --installed [<package-name-specs>...]
-Lista os pacotes instalados. <br><br>
+Lista os pacotes instalados. 
 
 # dnf [options] list --available [<package-name-specs>...]
-Lista os pacotes disponíveis.<br><br> 
+Lista os pacotes disponíveis. 
 
 # dnf [options] list --extras [<package-name-specs>...]
-Lista os extras, que são pacotes instalados no sistema que não estão disponíveis em nenhum repositório conhecido. <br><br> 
+Lista os extras, que são pacotes instalados no sistema que não estão disponíveis em nenhum repositório conhecido. 
 
 # dnf [options] list --obsoletes [<package-name-specs>...]
-Liste os pacotes instalados no sistema que são obsoletos por pacotes em qualquer repositório conhecido. <br><br>
+Liste os pacotes instalados no sistema que são obsoletos por pacotes em qualquer repositório conhecido. 
 
 # dnf [options] list --recent [<package-name-specs>...]
-Liste pacotes recentemente adicionados aos repositórios. <br><br>
+Liste pacotes recentemente adicionados aos repositórios. 
 
 # dnf [options] list --upgrades [<package-name-specs>...]
-Atualizações de lista disponíveis para os pacotes instalados. <br><br>
+Atualizações de lista disponíveis para os pacotes instalados. 
 
 # dnf [options] list --autoremove
 Lista de pacotes que serão removidos pelo comando dnf autoremove. 
