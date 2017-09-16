@@ -193,3 +193,94 @@ dnf help [<command>]
 
 Exibe o texto de ajuda para todos os comandos. Se for dado um nome de comando, apenas exibe a ajuda para esse comando específico. <br><br><br>
 
+## Comando History:<br><br>
+
+O comando de histórico permite ao usuário visualizar o que aconteceu em transações passadas e atuar de acordo com essas informações (assumindo que a opção de configuração do history_record está definida).<br><br>
+
+{% highlight text %}
+# dnf history [list] [<spec>...]
+{% endhighlight %}  <br><br> 
+
+A ação padrão do histórico é listar informações sobre transações determinadas em uma tabela. Cada <spec> pode ser uma <transaction-spec>, que especifica uma transação diretamente ou uma <transaction-spec>..<transaction-spec>, que especifica um intervalo de transações ou uma <package-name-spec>, que especifica uma transação por um pacote que ele manipulou. Quando nenhuma transação é especificada, liste todas as transações conhecidas. <br><br>
+
+{% highlight text %}
+# dnf history info [<spec>...]
+{% endhighlight %}  <br><br> 
+    
+Descreve as transações dadas. O significado de <spec> é o mesmo que no Comando da Lista de Histórico. Quando nenhuma transação for especificada, descreve o que aconteceu durante a última transação.<br><br> 
+
+{% highlight text %}
+# dnf history redo <transaction-spec>|<package-name-spec>
+{% endhighlight %}  <br><br> 
+    
+Repete a transação especificada. Usa a última transação (com ID mais alta) se for encontrada mais de uma transação para determinado <nome do pacote-especificação>. Se não for possível refazer algumas operações devido ao estado atual do RPMDB, não irá refazer a transação. <br><br>
+
+{% highlight text %}
+# dnf history rollback <transaction-spec>|<package-name-spec>
+{% endhighlight %}  <br><br> 
+    
+Desfazer todas as transações realizadas após a transação especificada. Usa a última transação (com ID mais alta) se for encontrada mais de uma transação para determinado <nome do pacote-especificação>. Se não for possível desfazer algumas transações devido ao estado atual do RPMDB, não irá desfazer qualquer transação. <br><br>
+
+{% highlight text %}
+# dnf history undo <transaction-spec>|<package-name-spec>
+{% endhighlight %}  <br><br> 
+
+Executa a operação oposta para todas as operações realizadas na transação especificada. Usa a última transação (com ID mais alta) se for encontrada mais de uma transação para determinado <nome do pacote-especificação>. Se não for possível desfazer algumas operações devido ao estado atual do RPMDB, não irá desfazer a transação. <br><br>
+
+{% highlight text %}
+# dnf history userinstalled
+{% endhighlight %}  <br><br> 
+
+Ele mostrará todos os pacotes <i>installonly</i>, pacotes instalados fora do DNF e pacotes não instalados como dependência. Ou seja, lista pacotes que permanecerão no sistema quando o comando Auto Remove Command ou Remove Command junto com clean_requirements_on_remove configuração definida como True for executado. Os mesmos resultados podem ser realizados com "dnf repoquery -userinstalled", mas o comando repoquery é muito mais poderoso na formatação de uma saída.<br><br> 
+
+Este comando, por padrão, não força uma sincronização de metadados expirados. <br><br><br>
+
+## Comando de Informação:<br><br>
+
+{% highlight text %}
+# dnf [options] info [<package-spec>...]
+{% endhighlight %}  <br><br>
+
+É usado para listar descrição e informações resumidas sobre pacotes instalados e disponíveis. <br><br><br>
+
+## Instalar:<br><br>
+
+{% highlight text %}
+dnf [options] install <spec>...
+{% endhighlight %}  <br><br>
+
+O DNF garante que os pacotes fornecidos e suas dependências estejam instalados no sistema. Cada <spec> pode ser um <package-spec> , ou um @<group-spec>. <br><br>
+
+Quando <package-spec> que especifica a versão exata do pacote é fornecido, o DNF irá instalar a versão desejada, independentemente da versão do pacote já instalada. A versão anterior do pacote será removida no caso de um pacote não instalado. <br><br><br>
+
+## Comando List: <br><br>
+
+Baixa listas de pacotes dependendo da relação dos pacotes com o sistema. Um pacote é <i>installed</i> se estiver presente no RPMDB, e está <i>available</i> se ele não estiver instalado, mas está presente em um repositório que o DNF conhece. O comando de lista também pode limitar os pacotes exibidos de acordo com outros critérios, por exemplo, apenas para aqueles que atualizam um pacote instalado. A opção de exclusão no arquivo de configuração (.conf) pode influenciar o resultado, mas se a opção de linha de comando <i>- -disable</i> exclui é usada, ele garante que todos os pacotes instalados serão listados.<br><br>
+
+Todos os formulários recebem um parâmetro [<package-specs>...] para limitar o resultado a apenas os pacotes correspondentes.<br><br>
+
+{% highlight text %}
+# dnf [options] list [--all] [<package-name-specs>...]
+Lista todos os pacotes conhecidos por nós, presentes no RPMDB, em um repo ou em ambos. <br><br>
+
+# dnf [options] list --installed [<package-name-specs>...]
+Lista os pacotes instalados. <br><br>
+
+# dnf [options] list --available [<package-name-specs>...]
+Lista os pacotes disponíveis.<br><br> 
+
+# dnf [options] list --extras [<package-name-specs>...]
+Lista os extras, que são pacotes instalados no sistema que não estão disponíveis em nenhum repositório conhecido. <br><br> 
+
+# dnf [options] list --obsoletes [<package-name-specs>...]
+Liste os pacotes instalados no sistema que são obsoletos por pacotes em qualquer repositório conhecido. <br><br>
+
+# dnf [options] list --recent [<package-name-specs>...]
+Liste pacotes recentemente adicionados aos repositórios. <br><br>
+
+# dnf [options] list --upgrades [<package-name-specs>...]
+Atualizações de lista disponíveis para os pacotes instalados. <br><br>
+
+# dnf [options] list --autoremove
+Lista de pacotes que serão removidos pelo comando dnf autoremove. 
+{% endhighlight %}  <br><br> 
