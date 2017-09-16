@@ -253,9 +253,9 @@ Este comando, por padrão, não força uma sincronização de metadados expirado
 # dnf [options] install <spec>...
 {% endhighlight %}  <br><br>
 
-O DNF garante que os pacotes fornecidos e suas dependências estejam instalados no sistema. Cada [<spec>] pode ser um [<package-spec>] , ou um @[<group-spec>]. <br><br>
+O DNF garante que os pacotes fornecidos e suas dependências estejam instalados no sistema. Cada [spec] pode ser um [package-spec] , ou um @[group-spec]. <br><br>
 
-Quando [<package-spec>] que especifica a versão exata do pacote é fornecido, o DNF irá instalar a versão desejada, independentemente da versão do pacote já instalada. A versão anterior do pacote será removida no caso de um pacote não instalado. <br><br><br>
+Quando [package-spec] que especifica a versão exata do pacote é fornecido, o DNF irá instalar a versão desejada, independentemente da versão do pacote já instalada. A versão anterior do pacote será removida no caso de um pacote não instalado. <br><br><br>
 
 ## Comando List: <br><br>
 
