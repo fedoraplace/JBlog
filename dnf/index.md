@@ -287,4 +287,38 @@ Atualizações de lista disponíveis para os pacotes instalados.
 
 # dnf [options] list --autoremove
 Lista de pacotes que serão removidos pelo comando dnf autoremove. 
-{% endhighlight %}  <br><br> 
+{% endhighlight %}  <br><br><br>
+
+## Comando Makecache:<br><br>
+
+{% highlight text %}
+# dnf [options] makecache
+{% endhighlight %}  <br><br>
+
+Downloads e caches em metadados em formato binário para todos os repos recuperados conhecidos. Tenta evitar o download sempre que possível (por exemplo, quando os metadados locais ainda não expiraram ou quando o timestamp dos metadados não mudou). <br><br>
+
+{% highlight text %}
+# dnf [options] makecache --timer
+{% endhighlight %}  <br><br>
+
+Como o makecache simples, mas instrui o DNF a ter mais conhecimento de recursos, o que significa que não fará nada se estiver executando a energia da bateria e terminará imediatamente se for muito breve após a última execução bem sucedida do makecache.<br><br><br> 
+
+## Comando Mark:<br><br>
+
+{% highlight text %}
+# dnf mark install <package-specs>...
+{% endhighlight %}  <br><br>
+
+Marca os pacotes especificados instalados pelo usuário. Isso pode ser útil se qualquer pacote foi instalado como uma dependência e deseja permanecer no sistema quando o comando Auto Remove Command ou Remove Command junto com clean_requirements_on_remove a opção de configuração definida como True for executado. <br><br>
+    
+{% highlight text %}
+# dnf mark remove <package-specs>...
+{% endhighlight %}  <br><br>
+
+Desmarca os pacotes especificados instalados pelo usuário. Sempre que você, como usuário, não precisa de um pacote específico, pode marcá-lo para remoção. O pacote permanece instalado no sistema, mas será removido quando o comando Auto Remove Command ou Remove Command juntamente com a opção de configuração clean_requirements_on_remove definido como True for executado. Você deve usar esta operação em vez de Remover o Comando se você não tem certeza se o pacote é um requisito de outros pacotes instalados pelo usuário no sistema. <br><br>
+
+{% highlight text %}
+# dnf mark group <package-specs>...
+{% endhighlight %}  <br><br>
+
+Marca os pacotes especificados conforme instalado pelo grupo. Isso pode ser útil se qualquer pacote foi instalado como uma dependência ou um usuário e deseja ser protegido e manipulado como um membro do grupo, como durante o grupo remover. <br><br><br>
