@@ -4,10 +4,10 @@ title: DNF
 excerpt: "Aprendendo o DNF."
 ---
 
-![jekyll Image](http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/02/1424055625jekyll.png)
+![Capa.png](http://ap.imagensbrasil.org/images/2017/09/19/Capa.png)
 {: .image-pull-right}
 
-<center><b>O Gerenciador de Pacotes DNF</b><br> Aprenda a usar aqui.</center><br><br><br>
+<center><b>O Gerenciador de Pacotes DNF:</b><br> Aprenda a usar aqui.</center><br><br><br>
 ## Modo de usar:
 
 {% highlight text %}
