@@ -322,3 +322,57 @@ Desmarca os pacotes especificados instalados pelo usuário. Sempre que você, co
 {% endhighlight %}  <br><br>
 
 Marca os pacotes especificados conforme instalado pelo grupo. Isso pode ser útil se qualquer pacote foi instalado como uma dependência ou um usuário e deseja ser protegido e manipulado como um membro do grupo, como durante o grupo remover. <br><br><br>
+
+## Comando Provides:<br><br>
+
+{% highlight text %}
+# dnf [options] provides <provide-spec>
+{% endhighlight %}  <br><br>
+
+Localiza os pacotes que fornecem o [provide-spec] . Isso é útil quando se conhece um nome de arquivo e quer encontrar o pacote (instalado ou não) que fornece esse arquivo. <br><br><br>
+
+## Reinstalar:<br><br>
+
+{% highlight text %}
+# dnf [options] reinstall <package-specs>...
+{% endhighlight %}  <br><br>
+
+Instala os pacotes especificados, falha se alguns dos pacotes não estão instalados ou não estão disponíveis (ou seja, não há um repositório onde baixar o mesmo RPM). <br><br><br>
+
+## Comando Remover:<br><br>
+
+{% highlight text %}
+# dnf [options] remove <package-specs>...
+{% endhighlight %}  <br><br>
+
+Remove os pacotes especificados do sistema, juntamente com todos os pacotes dependendo dos pacotes que estão sendo removidos. Cada [spec] pode ser um [package-spec], que especifica um pacote diretamente, ou um @[group-spec], que especifica um grupo (do meio) que o contém. Se clean_requirements_on_remove estiver habilitado (o padrão) também remove quaisquer dependências que não são mais necessárias.<br><br> 
+    
+{% highlight text %}
+# dnf [options] remove --duplicates
+{% endhighlight %}  <br><br>
+
+Remove a versão anterior dos pacotes duplicados. <br><br>
+    
+{% highlight text %}
+# dnf [options] remove --oldinstallonly
+{% endhighlight %}  <br><br>
+
+Remove os pacotes anteriores instalados apenas mantendo as versões mais recentes do <i>installonly_limit</i>.<br><br><br>
+
+## Comando Repolist:<br><br>
+
+{% highlight text %}
+# dnf [options] repolist [--enabled|--disabled|--all]
+{% endhighlight %}  <br><br>
+
+Dependendo do comando exato, listas habilitadas, desabilitadas ou todos os repositórios conhecidos. Lista todos os repositórios habilitados por padrão. Fornece informações mais detalhadas quando a opção -v é usada.<br><br>
+
+Para mais informações, visite o manual do DNF em seu shell. Para isso, digite;<br><br>
+
+{% highlight text %}
+$ man dnf
+{% endhighlight %}  <br><br>
+
+<b>Última modificação:</b> 18/09/2017
+
+
