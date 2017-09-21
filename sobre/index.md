@@ -7,9 +7,9 @@ excerpt: "Informações sobre o blog."
 ![Sobre.png](http://ap.imagensbrasil.org/images/2017/09/20/Sobre.png)
 {: .image-pull-right}
 
-<center><b>Uma breve informação<br></b> sobre esse blog.</center><br><br><br><p align="justify">
+<center><b>Uma breve informação<br></b> sobre esse blog.</center><br><br><br>
 
-## Eu e o blog:<br><br>
+## Eu e o blog:<br><br><p align="justify">
 
 Olá! Aqui quem fala é o caro autor deste blog. Me chamo Guilherme Felix Machado, atualmente tenho 25 anos de idade e não, não estou cursando nenhuma faculdade. Assim fujo do clichê das apresentações, onde indivíduo tal se mostra ao mundo como estudante de x coisa. De fato, acabei desenvolvendo um gosto, um afinco grande para com o Linux de modo geral. É uma "atmosfera" diferente do Windows que por ser proprietário, torna um ambiente mais <i>"fechado"</i>.<br><br> 
 
