@@ -7,8 +7,7 @@ excerpt: "Informações sobre o blog."
 ![Sobre.png](http://ap.imagensbrasil.org/images/2017/09/20/Sobre.png)
 {: .image-pull-right}
 
-<center><b>Uma breve informação<br></b> sobre esse blog.</center><br><br><br>
-<p align="justify">
+<center><b>Uma breve informação<br></b> sobre esse blog.</center><br><br><br><p align="justify">
 
 ## Eu e o blog:<br><br>
 
