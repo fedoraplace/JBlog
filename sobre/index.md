@@ -9,7 +9,7 @@ excerpt: "Informações sobre o blog."
 
 <center><b>Uma breve informação<br></b> sobre esse blog.</center><br><br><br>
 
-<script type="text/javascript" src="https://asciinema.org/a/Rs7KUcnuZMalC6xgyNghp63ug.js" id="asciicast-Rs7KUcnuZMalC6xgyNghp63ug" async></script>
+<script type="text/javascript" src="https://asciinema.org/a/Rs7KUcnuZMalC6xgyNghp63ug.js" id="asciicast-Rs7KUcnuZMalC6xgyNghp63ug" async width="500" heidth="200"></script>
 
 ## Eu e o blog:<br><br>
 
