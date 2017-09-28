@@ -4,11 +4,6 @@ title:  "O Comando dd"
 image: "http://ap.imagensbrasil.org/images/2017/09/28/Folder.png"
 date:   2017-09-28
 excerpt: "Conheça mais sobre o comando dd."
-project: true
-tag:
-- artigos
-- fedora
-- comandos
 ---
 
 ![Comandodd.png](http://ap.imagensbrasil.org/images/2017/09/28/Comandodd.png)
