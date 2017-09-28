@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: page
 title: Artigos
 excerpt: "Uma lista de artigos."
 ---
