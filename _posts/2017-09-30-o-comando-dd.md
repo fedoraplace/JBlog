@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "O Comando dd"
+image: "http://ap.imagensbrasil.org/images/2017/09/28/Folder.png"
 date:   2017-09-30
 excerpt: "Conheça mais sobre o comando dd."
 ---
@@ -12,7 +13,7 @@ excerpt: "Conheça mais sobre o comando dd."
 
 ## O Comando dd:<br><br>
 
-<p align="justify">O comando dd se encontra disponível no Fedora como padrão, ou seja, logo após instalar, se for do seu desejo já poderá utilizá-lo sem nenhum problema. Por ser uma ferramenta nativa, logo o seu uso se torna mais importante e também corriqueiro de acordo com a nescessidade que possuir. Por exemplo, um usuário Linux normalmente gosta de testar outros sistemas operacionais semelhantes, Debian ou CentOS por exemplo. Para tal, o indivíduo evidentemente precisa de uma mídia, seja ela um CD/DVD/Pen Drive. Ela precisará gravar o arquivo .ISO baixado pelo site oficial do projeto para poder dar boot no computador e efetuar a instalação do sistema. Para tanto, o comando dd lhe vêm bem a calhar. 
+O comando dd se encontra disponível no Fedora como padrão, ou seja, logo após instalar, se for do seu desejo já poderá utilizá-lo sem nenhum problema. Por ser uma ferramenta nativa, logo o seu uso se torna mais importante e também corriqueiro de acordo com a nescessidade que possuir. Por exemplo, um usuário Linux normalmente gosta de testar outros sistemas operacionais semelhantes, Debian ou CentOS por exemplo. Para tal, o indivíduo evidentemente precisa de uma mídia, seja ela um CD/DVD/Pen Drive. Ela precisará gravar o arquivo .ISO baixado pelo site oficial do projeto para poder dar boot no computador e efetuar a instalação do sistema. Para tanto, o comando dd lhe vêm bem a calhar. 
 Aqui lhe será mostrado várias maneiras diferentes de se usar esse comando e de que maneira ele pode ser aplicado. <br><br>
 
 O comando dd significa <b>data duplicator</b> e a sua função nada mais é do que copiar algo, byte a byte, de maneira completa e confiável. Devido a isso é possível realizar simples cópias de arquivos até a cópias completas de um disco rígido (HDD). Para informações mais completas, acesse o manual do comando, abrindo o seu Terminal e digitando;
