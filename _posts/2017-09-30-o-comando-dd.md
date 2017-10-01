@@ -8,10 +8,9 @@ excerpt: "Conheça mais sobre o comando dd."
 ![Comandodd.png](http://ap.imagensbrasil.org/images/2017/09/28/Comandodd.png)
 {: .image-pull-right}
 
-<center><b>Aprenda melhor a usar o comando dd</b><br> abaixo maneiras e exemplos de como aplicar</center><br><br><br>
+<center><b>Aprenda melhor a usar o comando dd</b><br> abaixo maneiras e exemplos de como aplicar</center><br><br><br><p align="justify">
 
 ## O Comando dd:<br><br>
-<p align="justify">
 
 O comando dd se encontra disponível no Fedora como padrão, ou seja, logo após instalar, se for do seu desejo já poderá utilizá-lo sem nenhum problema. Por ser uma ferramenta nativa, logo o seu uso se torna mais importante e também corriqueiro de acordo com a nescessidade que possuir. Por exemplo, um usuário Linux normalmente gosta de testar outros sistemas operacionais semelhantes, Debian ou CentOS por exemplo. Para tal, o indivíduo evidentemente precisa de uma mídia, seja ela um CD/DVD/Pen Drive. Ela precisará gravar o arquivo .ISO baixado pelo site oficial do projeto para poder dar boot no computador e efetuar a instalação do sistema. Para tanto, o comando dd lhe vêm bem a calhar. 
 Aqui lhe será mostrado várias maneiras diferentes de se usar esse comando e de que maneira ele pode ser aplicado. <br><br>
