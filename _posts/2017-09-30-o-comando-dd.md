@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "O Comando dd"
 date:   2017-09-30
 excerpt: "Conheça mais sobre o comando dd."
