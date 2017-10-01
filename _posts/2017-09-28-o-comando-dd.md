@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: +place
 title:  "O Comando dd"
 image: "http://ap.imagensbrasil.org/images/2017/09/28/Folder.png"
 date:   2017-09-28
