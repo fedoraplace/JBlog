@@ -37,7 +37,7 @@ Para usar o comando dd, deve-se seguir a seguinte estrutura em seu shell.<br><br
 {% highlight text %}
 # dd if=/dev/sda of=/dev/sdb 
 {% endhighlight %}   <br><br>
-<hr size="5">
+<hr size="8">
 <br><br><br>
 ## Backup do disco rígido para outra mídia:<br><br>
 
