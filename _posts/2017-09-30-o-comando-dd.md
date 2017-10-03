@@ -74,7 +74,7 @@ Master Boot Record é o setor de inicialização do sistema. É a partir deste s
 
 Lembra que dá última vez o formato foi alterado para ".img"? Desta vez, o caminho de destino aponta para um arquivo dentro da pasta /tmp chamado backup-sda.mbr. Sim, o final é ".mbr". Onde;<br><br>
 
-<b><bs></b> : Representa o tamanho do disco de origem a ser copiado, que é de 512 bytes. Posteriormente, <b>count</b> significa a quantidade de blocos a ser copiado nesse processo.<br><br>
+<b>bs</b> : Representa o tamanho do disco de origem a ser copiado, que é de 512 bytes. Posteriormente, <b>count</b> significa a quantidade de blocos a ser copiado nesse processo.<br><br>
 
 Salve-o onde quiser por motivos de segurança maior. Para restaurar, efetue o movimento inverso.<br><br>
 
@@ -195,8 +195,8 @@ Mais detalhes sobre eles, talvez em um próximo artigo.<br><br>
 
 Esse artigo foi produzido para auxiliar as pessoas com o uso do dd. Cada comando aqui postado é fruto de uma pesquisa em 3 fontes:<br><br>
 
-▶ <a href="https://www.youtube.com/watch?v=yYKE17YuO1Q">YouTube</a>
-▶ <a href="https://www.linuxdescomplicado.com.br/2016/11/alguns-exemplos-de-que-o-comando-dd-pode-ser-considerado-umas-das-ferramentas-mais-versateis-do-linux.html">Linux Descomplicado</a>
+▶ <a href="https://www.youtube.com/watch?v=yYKE17YuO1Q">YouTube</a><br>
+▶ <a href="https://www.linuxdescomplicado.com.br/2016/11/alguns-exemplos-de-que-o-comando-dd-pode-ser-considerado-umas-das-ferramentas-mais-versateis-do-linux.html">Linux Descomplicado</a><br>
 ▶ <a href="http://www.dicas-l.com.br/arquivo/usando_o_comando_dd.php">Dicas-L</a><br><br>
 
 Os comandos do dd não foram testados por mim, por não possuir um computador para testes no momento, porém asseguro que o comando dd para gravar uma ISO em um Pen Drive funciona perfeitamente.<br><br>
